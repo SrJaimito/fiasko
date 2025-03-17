@@ -1,4 +1,4 @@
 # Fiasko
 
-Fiasko is an open-source tool for estimating the reliability of electronic designs.
+Fiasko is an open-source tool for easy estimation of reliability in electronic designs.
 
