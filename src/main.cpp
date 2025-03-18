@@ -1,12 +1,13 @@
 #include <QApplication>
-#include <QLabel>
+
+#include "BlockDiagramView.h"
 
 int main (int argc, char *argv[]) {
     QApplication app(argc, argv);
 
-    QLabel label("Trocola");
-    label.show();
-    
+    BlockDiagramView blockDiagramView;
+    blockDiagramView.show();
+
     return app.exec();
 }
 
