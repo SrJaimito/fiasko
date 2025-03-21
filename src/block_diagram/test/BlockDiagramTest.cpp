@@ -1,10 +1,38 @@
-#include "BlockDiagramTest.h"
+#include <QTest>
+
+#include "../model/ConstantBlockModel.h"
+#include "../model/ConnectorModel.h"
+
+class BlockDiagramTest: public QObject {
+    Q_OBJECT
+
+    private slots:
+        void testConstantBlocks();
+};
 
 void BlockDiagramTest::testConstantBlocks() {
-    bool variable = true;
-    QCOMPARE(variable, true);
+    ConstantBlockModel b1(0.9);
+    ConstantBlockModel b2(0.9);
+    ConstantBlockModel b3(0.9);
+
+    ConnectorModel c1;
+    c1.setInput(&b1);
+    c1.addOutput(&b2);
+
+    ConnectorModel c2;
+    c2.setInput(&b2);
+    c2.addOutput(&b3);
+
+    b1.setOutput(&c1);
+
+    b2.setInput(&c1);
+    b2.setOutput(&c2);
+
+    b3.setInput(&c2);
+
+    QCOMPARE(b3.getReliability(), 0.9 * 0.9 * 0.9);
 }
 
 QTEST_MAIN(BlockDiagramTest)
-#include "blockdiagramtest.moc"
+#include "BlockDiagramTest.moc"
 
