@@ -23,13 +23,6 @@ void BlockDiagramTest::testConstantBlocks() {
     c2.setInput(&b2);
     c2.addOutput(&b3);
 
-    b1.setOutput(&c1);
-
-    b2.setInput(&c1);
-    b2.setOutput(&c2);
-
-    b3.setInput(&c2);
-
     QCOMPARE(b3.getReliability(), 0.9 * 0.9 * 0.9);
 }
 
