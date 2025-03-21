@@ -5,3 +5,10 @@ bin/
 build/
 
 .cache
+
+# Tests
+**/test/*.*
+!**/test/*.h
+!**/test/*.cpp
+!**/test/*.pro
+
