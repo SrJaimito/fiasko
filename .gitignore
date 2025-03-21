@@ -1,14 +1,8 @@
 .qmake.stash
 Makefile
 compile_commands.json
-bin/
-build/
+bin
+build
 
 .cache
-
-# Tests
-**/test/*.*
-!**/test/*.h
-!**/test/*.cpp
-!**/test/*.pro
 
