@@ -13,13 +13,19 @@ class ConnectorModel {
         BlockModel *input;
         std::vector<BlockModel *> outputs;
 
+        double transferredReliability;
+        bool transferred;
+
     ////////////////////////////////////////// Methods
 
     public:
+        ConnectorModel();
+
         void setInput(BlockModel *block);
         void addOutput(BlockModel *block);
 
-        double transferReliability() const;
+        double transferReliability();
+        void resetTransfer();
 
 };
 
