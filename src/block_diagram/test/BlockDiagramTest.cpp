@@ -1,7 +1,7 @@
 #include <QTest>
 
 #include "../model/ConstantBlockModel.h"
-#include "../model/ConnectorModel.h"
+#include "../model/WireModel.h"
 
 class BlockDiagramTest: public QObject {
     Q_OBJECT
@@ -15,11 +15,11 @@ void BlockDiagramTest::testConstantBlocks() {
     ConstantBlockModel b2(0.9);
     ConstantBlockModel b3(0.9);
 
-    ConnectorModel c1;
+    WireModel c1;
     c1.setInput(&b1);
     c1.addOutput(&b2);
 
-    ConnectorModel c2;
+    WireModel c2;
     c2.setInput(&b2);
     c2.addOutput(&b3);
 
