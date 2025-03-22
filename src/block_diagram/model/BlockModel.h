@@ -1,26 +1,26 @@
 #ifndef __BLOCK_MODEL_H__
 #define __BLOCK_MODEL_H__
 
-#include "ConnectorModel.h"
+#include "WireModel.h"
 
 class BlockModel {
 
     ////////////////////////////////////////// Attributes
 
     private:
-        ConnectorModel *input;
-        ConnectorModel *output;
+        WireModel *input;
+        WireModel *output;
 
     ////////////////////////////////////////// Methods
 
     public:
         BlockModel();
 
-        ConnectorModel *getInput() const;
-        void setInput(ConnectorModel *input);
+        WireModel *getInput() const;
+        void setInput(WireModel *input);
 
-        ConnectorModel *getOutput() const;
-        void setOutput(ConnectorModel *output);
+        WireModel *getOutput() const;
+        void setOutput(WireModel *output);
 
         virtual double getReliability() const = 0;
 

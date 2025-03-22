@@ -1,11 +1,11 @@
-#ifndef __CONNECTOR_MODEL_H__
-#define __CONNECTOR_MODEL_H__
+#ifndef __Wire_MODEL_H__
+#define __Wire_MODEL_H__
 
 #include <vector>
 
 class BlockModel;
 
-class ConnectorModel {
+class WireModel {
 
     ////////////////////////////////////////// Attributes
 
@@ -19,7 +19,7 @@ class ConnectorModel {
     ////////////////////////////////////////// Methods
 
     public:
-        ConnectorModel();
+        WireModel();
 
         void setInput(BlockModel *block);
         void addOutput(BlockModel *block);

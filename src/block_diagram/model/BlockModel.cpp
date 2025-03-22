@@ -5,19 +5,19 @@ BlockModel::BlockModel() {
     this->output = nullptr;
 }
 
-ConnectorModel *BlockModel::getInput() const {
+WireModel *BlockModel::getInput() const {
     return this->input;
 }
 
-void BlockModel::setInput(ConnectorModel *input) {
+void BlockModel::setInput(WireModel *input) {
     this->input = input;
 }
 
-ConnectorModel *BlockModel::getOutput() const {
+WireModel *BlockModel::getOutput() const {
     return this->output;
 }
 
-void BlockModel::setOutput(ConnectorModel *output) {
+void BlockModel::setOutput(WireModel *output) {
     this->output = output;
 }
 

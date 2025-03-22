@@ -1,23 +1,23 @@
-#include "ConnectorModel.h"
+#include "WireModel.h"
 
 #include "BlockModel.h"
 
-ConnectorModel::ConnectorModel() {
+WireModel::WireModel() {
     this->input = nullptr;
     this->transferred = false;
 }
 
-void ConnectorModel::setInput(BlockModel *block) {
+void WireModel::setInput(BlockModel *block) {
     this->input = block;
     block->setOutput(this);
 }
 
-void ConnectorModel::addOutput(BlockModel *block) {
+void WireModel::addOutput(BlockModel *block) {
     this->outputs.push_back(block);
     block->setInput(this);
 }
 
-double ConnectorModel::transferReliability() {
+double WireModel::transferReliability() {
     if (this->transferred) {
         return this->transferredReliability;
     }
@@ -28,7 +28,7 @@ double ConnectorModel::transferReliability() {
     return this->transferredReliability;
 }
 
-void ConnectorModel::resetTransfer() {
+void WireModel::resetTransfer() {
     this->transferred = false;
 }
 
