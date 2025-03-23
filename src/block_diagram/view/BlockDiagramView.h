@@ -1,14 +1,24 @@
-#include <QWidget>
 #include <QGraphicsView>
+#include <vector>
+
+#include "BlockView.h"
 
 class BlockDiagramView: public QGraphicsView {
     Q_OBJECT
 
     ////////////////////////////////////////// Attributes
 
+    private:
+        std::vector<BlockView *> blocks;
+
     ////////////////////////////////////////// Methods
 
     public:
-        explicit BlockDiagramView(QWidget *parent = nullptr);
+        BlockDiagramView(QWidget *parent = nullptr);
+
+    protected:
+        void resizeEvent(QResizeEvent *event) override;
+        void mousePressEvent(QMouseEvent *event) override;
+
 };
 

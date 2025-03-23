@@ -11,12 +11,14 @@ INCLUDEPATH += src/block_diagram/view
 INCLUDEPATH += src/block_diagram/model
 
 HEADERS += src/block_diagram/view/BlockDiagramView.h \
+           src/block_diagram/view/BlockView.h \
            src/block_diagram/model/BlockModel.h \
-           src/block_diagram/model/ConnectorModel.h
+           src/block_diagram/model/WireModel.h
 
 SOURCES += src/block_diagram/view/BlockDiagramView.cpp \
+           src/block_diagram/view/BlockView.cpp \
            src/block_diagram/model/BlockModel.cpp \
-           src/block_diagram/model/ConnectorModel.cpp
+           src/block_diagram/model/WireModel.cpp
 
 SOURCES += src/main.cpp
 
